@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+#root {
+  background-color: pink;
+  color: #fff;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+}
+
+.para {
+  text-align: center;
+}
+
+.game-container {
+  margin-top: 25px;
+  background-color: white;
+  color: black;
+  position: relative;
+  height: 450px;
+  width: 500px;
+}
+
+.incorrect-letters-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+  font-size: 24px;
+}
+
+.incorrect-letters-container p {
+  margin: 0px;
+}
+
+.word {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.letter {
+  border-bottom: 3px solid black;
+  display: inline-flex;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3px;
+  height: 50px;
+  width: 20px;
+}
+
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* display: flex; */
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  background: pink;
+  border-radius: 25px;
+  box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.popup button {
+  cursor: pointer;
+  background-color: #fff;
+  color: pink;
+  border: 0;
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+.notification-container {
+  background-color: #d0f9e5;
+  color: black;
+  padding: 15px 20px;
+  position: absolute;
+  bottom: -60px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 25px;
+  font-size: 16px;
+}
+
+.notification-container p {
+  margin: 0;
+}
+
+.notification-container.show {
+  transform: translateY(-60px);
+}
+
+.restart-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.restart-container button {
+  cursor: pointer;
+  background-color: pink;
+  color: white;
+  border: 0;
+  margin-top: 0;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+.help-container button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 2vh;
+  margin-left: 3vh;
+  cursor: pointer;
+  background-color: pink;
+  color: white;
+  border: 0;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+.popup-help {
+  height: 400px;
+  width: 40%;
+  background-color: lavender;
+  position: absolute;
+  top: 20%;
+  right: 30%;
+  color: black;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.popup-help p {
+  padding: 60px;
+  text-align: justify;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px 0 15px;
+}
